@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaVentas.Modelos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace SistemasVentas.DAL
             string consulta = "select * from marca";
             DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return Lista;
+        }
+        public void InsertarMarcaDal(Marca m)
+        {
+            string consulta = "insert into marca values('" + m.Nombre + "'," + "'Inactivo')";
+            conexion.Ejecutar(consulta);
         }
     }
 }

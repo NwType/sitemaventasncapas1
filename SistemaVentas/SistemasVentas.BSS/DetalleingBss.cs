@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemaVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,10 +11,15 @@ namespace SistemasVentas.BSS
 {
     public class DetalleingBss
     {
-        DetalleingDal dal= new DetalleingDal();
+        DetalleingDal dal = new DetalleingDal();
         public DataTable ListarDetalleingBss()
         {
             return dal.ListarDetalleingDal();
         }
+        public void InsertarDetallesingBss(DetalleIng di)
+        {
+            dal.InsertarDetalleVentaDal(di);
+        }
+
     }
 }
