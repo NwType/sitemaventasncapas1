@@ -20,5 +20,17 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarProductoDal(p);
         }
+        public Producto ObtenerIdBss(int id)
+        {
+            return dal.ObtenerProductoId(id);
+        }
+        public void EditarProductoBss(Producto p)
+        {
+            dal.EditarProductoDaL(p);
+        }
+        public void EliminarPersonaBss(int id)
+        {
+            dal.EliminarProductoDal(id);
+        }
     }
 }

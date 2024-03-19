@@ -28,11 +28,21 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
             Usuario u = new Usuario();
             u.IdPersona = Convert.ToInt32(textBox1.Text);
-            u.NombreUser =textBox2.Text;
-            u.Contrasenia =textBox3.Text;
-            u.FechaReg=Convert.ToDateTime(textBox4.Text);
+            u.NombreUser = textBox2.Text;
+            u.Contrasenia = textBox3.Text;
+            u.FechaReg = dateTimePicker1.Value;
             bss.InsertarUsuarioBss(u);
             MessageBox.Show("Se guardo exitosamente");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

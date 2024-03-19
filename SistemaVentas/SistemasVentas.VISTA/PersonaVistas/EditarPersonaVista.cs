@@ -9,42 +9,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SistemasVentas.VISTA.PersonaVistas
 {
-    public partial class InsertarPersonaVista : Form
+    public partial class EditarPersonaVista : Form
     {
+        int idx = 0;
         Persona p = new Persona();
-        public InsertarPersonaVista()
+        PersonaBss bss = new PersonaBss();
+        public EditarPersonaVista(int id)
         {
+            idx = id;
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void EditarPersonaVista_Load(object sender, EventArgs e)
         {
-
+            p = bss.ObtenerIdBss(idx);
+            textBox1.Text = p.Nombre;
+            textBox2.Text = p.Apellido;
+            textBox3.Text = p.Telefono;
+            textBox4.Text = p.Ci;
+            textBox5.Text = p.Correo;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-        PersonaBss bss = new PersonaBss();
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Persona p = new Persona();
             p.Nombre = textBox1.Text;
             p.Apellido = textBox2.Text;
-            p.Telefono= textBox3.Text;
+            p.Telefono = textBox3.Text;
             p.Ci = textBox4.Text;
             p.Correo = textBox5.Text;
-            bss.InserarPersonaBss(p);
-            MessageBox.Show("se guardo correctamente");
-        }
-        private void InsertarPersonaVista_Load(object sender, EventArgs e)
-        {
+            bss.EditarPersonaBss(p);
+            MessageBox.Show("datos actualizados");
+
         }
     }
 }

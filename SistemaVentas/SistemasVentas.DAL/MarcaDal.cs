@@ -21,5 +21,29 @@ namespace SistemasVentas.DAL
             string consulta = "insert into marca values('" + m.Nombre + "'," + "'Inactivo')";
             conexion.Ejecutar(consulta);
         }
+        public Marca ObtenerMarcaId(int id)
+        {
+            string consulta = "select * from marca where idmarca=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "ya");
+            Marca m=new Marca();
+            if (tabla.Rows.Count > 0)
+            {
+                m.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
+                m.Nombre = tabla.Rows[0]["nombre"].ToString();
+            }
+            return m;
+        }
+        public void EditarMarcaDal(Marca m)
+        {
+            string consulta = "UPDATE marca SET nombre = '" + m.Nombre + "' WHERE idMarca = " + m.IdMarca;
+
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarMarcaDal(int id)
+        {
+            string consulta = "DELETE FROM marca WHERE idmarca = " + id;
+
+            conexion.Ejecutar(consulta);
+        }
     }
 }

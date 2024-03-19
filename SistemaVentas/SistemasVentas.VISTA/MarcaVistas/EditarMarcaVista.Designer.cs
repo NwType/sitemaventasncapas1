@@ -1,6 +1,6 @@
 ﻿namespace SistemasVentas.VISTA.MarcaVistas
 {
-    partial class InsertarMarcaVista
+    partial class EditarMarcaVista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,68 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
             label1 = new Label();
+            textBox1 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(51, 227);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(233, 227);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(164, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(88, 95);
+            label1.Location = new Point(162, 158);
             label1.Name = "label1";
             label1.Size = new Size(51, 15);
-            label1.TabIndex = 3;
+            label1.TabIndex = 7;
             label1.Text = "Nombre";
             // 
-            // InsertarMarcaVista
+            // textBox1
+            // 
+            textBox1.Location = new Point(238, 150);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 6;
+            // 
+            // button2
+            // 
+            button2.DialogResult = DialogResult.Cancel;
+            button2.Location = new Point(307, 290);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 5;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.DialogResult = DialogResult.OK;
+            button1.Location = new Point(125, 290);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Guardar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // EditarMarcaVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(382, 327);
+            ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Name = "InsertarMarcaVista";
-            Text = "InsertarMarcaVista";
+            Name = "EditarMarcaVista";
+            Text = "EditarMarcaVista";
+            Load += EditarMarcaVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
         private Label label1;
+        private TextBox textBox1;
+        private Button button2;
+        private Button button1;
     }
 }
