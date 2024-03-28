@@ -15,7 +15,7 @@ namespace SistemasVentas.VISTA.MarcaVistas
     public partial class EditarMarcaVista : Form
     {
         int idx = 0;
-        Marca m = new Marca();
+        Marca p = new Marca();
         MarcaBss bss = new MarcaBss();
         public EditarMarcaVista(int id)
         {
@@ -25,14 +25,15 @@ namespace SistemasVentas.VISTA.MarcaVistas
 
         private void EditarMarcaVista_Load(object sender, EventArgs e)
         {
-            m = bss.ObtenerMarcaIdBss(idx);
-            textBox1.Text = m.Nombre;
+            p = bss.ObtenerMarcaIdBss(idx);
+            textBox1.Text = p.Nombre;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            m.Nombre= textBox1.Text;
-            bss.EditarMarcaBss(m);
+            p.Nombre= textBox1.Text;
+            bss.EditarMarcaBss(p);
             MessageBox.Show("datos actualizados");
         }
     }

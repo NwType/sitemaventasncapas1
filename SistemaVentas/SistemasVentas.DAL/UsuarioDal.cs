@@ -21,9 +21,7 @@ namespace SistemasVentas.DAL
                 string fechaFormateada = u.FechaReg.ToString("yyyy-MM-dd HH:mm:ss"); 
 
                 string consulta = "INSERT INTO usuario VALUES (" + u.IdPersona + ", '" + u.NombreUser + "', '" + u.Contrasenia + "', '" + u.FechaReg + "')";
-
                 conexion.Ejecutar(consulta);
-
         }
         
     }

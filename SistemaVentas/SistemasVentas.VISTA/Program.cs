@@ -22,7 +22,7 @@ namespace SistemasVentas.VISTA
             //Application.Run(new ProveedorVistas.InsertarProveedorVista());
             //Application.Run(new ProductoVistas.ProductoListarVista());
             //Application.Run(new ProductoVistas.InsertarProductoVista());
-            Application.Run(new MarcaVistas.MarcaListarVista());
+            //Application.Run(new MarcaVistas.MarcaListarVista());
             //Application.Run(new MarcaVistas.InsertarMarcaVista());
             //Application.Run(new ProveeVistas.ProveeListarVistas());
             //Application.Run(new ProveeVistas.InsertarProveeVista());
@@ -40,6 +40,8 @@ namespace SistemasVentas.VISTA
             //Application.Run(new DetalleVentaVistas.InsertarDetalleVentaVista());
             //Application.Run(new RolVistas.RolListarVista());
             //Application.Run(new RolVistas.RolAgregarVista());
+            Application.Run(new AdministradorAlmacenVista.AdministradorAlmacenVista());
+            //Application.Run(new AdministradorVista.AdministradorVista());
 
         }
     }

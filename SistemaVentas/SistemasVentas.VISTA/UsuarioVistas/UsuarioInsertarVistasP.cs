@@ -28,7 +28,6 @@ namespace SistemasVentas.VISTA.UsuarioVistas
             {
                 Persona persona = bss.ObtenerIdBss(IdPersonaSeleccionada);
                 textBox1.Text = persona.Nombre + " " + persona.Apellido;
-
             }
         }
 
