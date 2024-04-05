@@ -11,11 +11,10 @@ namespace SistemasVentas.VISTA
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new VentaVistas.VentaListarVista());
-            Application.Run(new VentaVistas.InsertarVentaVista());
-            Application.Run(new DetalleVentaVistas.DetalleVentaListarVenta());
-            Application.Run(new DetalleVentaVistas.InsertarDetalleVentaVista());
-
+            //Application.Run(new AdministradorVista.AdministradorVista());
+            //Application.Run(new AdministradorAlmacenVista.AdministradorAlmacenVista());
+            //Application.Run(new VendedorVista.AnadirVentaVista());
+            Application.Run(new AdministradorAlmacenVista.ProveedorVista());
         }
     }
 }

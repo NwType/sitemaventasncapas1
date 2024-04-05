@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.MarcaVistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,21 @@ namespace SistemasVentas.VISTA.AdministradorAlmacenVista
         public ProveeVista()
         {
             InitializeComponent();
+        }
+        ProveeBss bss = new ProveeBss();
+        private void ProveeVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarProveeBss();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ProveeVistas.InsertarProveeVista fr = new ProveeVistas.InsertarProveeVista();
+            fr.ShowDialog();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProveedorVista fr = new ProveedorVista();
+            fr.ShowDialog();
         }
     }
 }

@@ -218,6 +218,7 @@
             Controls.Add(panel1);
             Name = "AdministradorAlmacenVista";
             Text = "AdministradorAlmacenVista";
+            Load += AdministradorAlmacenVista_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

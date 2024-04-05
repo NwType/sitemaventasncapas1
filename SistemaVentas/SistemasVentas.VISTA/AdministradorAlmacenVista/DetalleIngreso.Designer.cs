@@ -138,6 +138,7 @@
             button4.TabIndex = 59;
             button4.Text = "ANADIR";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -189,6 +190,7 @@
             Controls.Add(panel1);
             Name = "DetalleIngreso";
             Text = "DetalleIngreso";
+            Load += DetalleIngreso_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();

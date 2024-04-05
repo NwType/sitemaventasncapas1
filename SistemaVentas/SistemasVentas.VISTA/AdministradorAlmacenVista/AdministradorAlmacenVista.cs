@@ -18,10 +18,14 @@ namespace SistemasVentas.VISTA.AdministradorAlmacenVista
         {
             InitializeComponent();
         }
-        DetalleingBss bss= new DetalleingBss();
+        DetalleingBss bss = new DetalleingBss();
         private void button1_Click(object sender, EventArgs e)
         {
-                dataGridView1.DataSource = bss.ListarDetalleingBss();
+            dataGridView1.DataSource = bss.ListarDetalleingAdmBss();
+        }
+        private void AdministradorAlmacenVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarDetalleingAdmBss();
         }
     }
 }

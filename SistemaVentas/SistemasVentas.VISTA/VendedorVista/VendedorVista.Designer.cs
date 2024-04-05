@@ -175,6 +175,7 @@
             button4.TabIndex = 56;
             button4.Text = "ANADIR";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -201,6 +202,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(474, 281);
             dataGridView1.TabIndex = 53;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button5
             // 
@@ -228,6 +230,7 @@
             Controls.Add(panel1);
             Name = "VendedorVista";
             Text = "VendedorVista";
+            Load += VendedorVista_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

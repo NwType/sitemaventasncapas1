@@ -101,6 +101,7 @@
             button2.TabIndex = 58;
             button2.Text = "PROVEEDORES";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button6
             // 
@@ -148,6 +149,7 @@
             button4.TabIndex = 72;
             button4.Text = "ANADIR";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -189,6 +191,7 @@
             Controls.Add(panel1);
             Name = "ProveeVista";
             Text = "ProveeVista";
+            Load += ProveeVista_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

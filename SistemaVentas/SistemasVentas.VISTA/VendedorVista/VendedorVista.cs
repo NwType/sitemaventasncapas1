@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace SistemasVentas.VISTA.VendedorVista
         public VendedorVista()
         {
             InitializeComponent();
+        }
+        VentaBss bssv = new VentaBss();
+        private void VendedorVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bssv.ListarVentaBss();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

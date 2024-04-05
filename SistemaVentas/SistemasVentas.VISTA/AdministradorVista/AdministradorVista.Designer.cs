@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridView dataGridView1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministradorVista));
             panel2 = new Panel();
             button6 = new Button();
@@ -48,9 +49,10 @@
             button7 = new Button();
             button8 = new Button();
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
             button9 = new Button();
             button10 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -59,8 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.WindowFrame;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(266, 148);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(746, 469);
+            dataGridView1.TabIndex = 53;
             // 
             // panel2
             // 
@@ -160,6 +170,7 @@
             button3.TabIndex = 18;
             button3.Text = "VENDEDORES";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // pictureBox4
             // 
@@ -181,6 +192,7 @@
             button2.TabIndex = 16;
             button2.Text = "VENTAS";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox3
             // 
@@ -202,6 +214,7 @@
             button1.TabIndex = 14;
             button1.Text = "PRODUCTOS";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox2
             // 
@@ -276,14 +289,6 @@
             textBox1.Size = new Size(475, 23);
             textBox1.TabIndex = 54;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(266, 148);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(746, 469);
-            dataGridView1.TabIndex = 53;
-            // 
             // button9
             // 
             button9.BackColor = Color.DarkGray;
@@ -325,6 +330,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "AdministradorVista";
             Text = "AdministradorVista";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
@@ -334,7 +340,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

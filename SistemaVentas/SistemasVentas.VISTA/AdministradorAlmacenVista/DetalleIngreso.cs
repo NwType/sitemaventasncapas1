@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using SistemaVentas.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,20 @@ namespace SistemasVentas.VISTA.AdministradorAlmacenVista
         public DetalleIngreso()
         {
             InitializeComponent();
+        }
+        private void DetalleIngreso_Load(object sender, EventArgs e)
+        {
+            DetalleingBss bssi= new DetalleingBss();
+            dataGridView1.DataSource = bssi.ListarDetalleingAdmBss();
+        }
+        IngresoBss bss= new IngresoBss();
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IngresoVistas.InsertarIngresoVista fr = new IngresoVistas.InsertarIngresoVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarIngresoBss();
+            }
         }
     }
 }

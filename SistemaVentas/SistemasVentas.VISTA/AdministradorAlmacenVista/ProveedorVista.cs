@@ -58,5 +58,17 @@ namespace SistemasVentas.VISTA.AdministradorAlmacenVista
                 dataGridView1.DataSource = bss.ListarProveedorBss();
             }
         }
+        ProveeBss bssp = new ProveeBss();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProveeVista fr = new ProveeVista();
+            fr.ShowDialog();
+        }
+        DetalleIngreso bssi = new DetalleIngreso();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DetalleIngreso fr = new DetalleIngreso();
+            fr.ShowDialog();
+        }
     }
 }

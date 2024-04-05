@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.MarcaVistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,29 @@ namespace SistemasVentas.VISTA.AdministradorVista
         private void pictureBox7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            VendedorVista.VendedorVista fr = new VendedorVista.VendedorVista();
+            {
+                dataGridView1.DataSource = dataGridView1.DataSource;
+            }
+        }
+        ProductoBss bssp = new ProductoBss();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bssp.ListarProductoBss();
+        }
+        VentaBss bssv= new VentaBss();
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VendedorVista.VendedorVista fr = new VendedorVista.VendedorVista();
+            fr.ShowDialog();
+            {
+                dataGridView1.DataSource = bssv.ListarVentaBss();
+            }
         }
     }
 }

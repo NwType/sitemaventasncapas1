@@ -106,6 +106,7 @@
             button2.TabIndex = 58;
             button2.Text = "PROVEE";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button6
             // 
@@ -145,6 +146,7 @@
             button1.TabIndex = 62;
             button1.Text = " INGRESO DE PRODUCTOS";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox2
             // 

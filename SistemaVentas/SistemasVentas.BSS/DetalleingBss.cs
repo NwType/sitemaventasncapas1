@@ -20,6 +20,10 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarDetalleVentaDal(di);
         }
+        public DataTable ListarDetalleingAdmBss()
+        {
+            return dal.ListarDetalleinAdmgDal();
+        }
 
     }
 }

@@ -24,5 +24,15 @@ namespace SistemasVentas.DAL
                 + fechaFormateada + "', " + di.Cantidad + ", " + di.PrecioCosto + ", " + di.PrecioVenta + ", " + di.Subtotal + ", 'Activo')";
             conexion.Ejecutar(consulta);
         }
+        public DataTable ListarDetalleinAdmgDal()
+        {
+            string consulta = @"
+    SELECT DI.IDDETALLEING, I.IDINGRESO, P.NOMBRE AS NOMBRE_PRODUCTO, DI.FECHAVENC, DI.CANTIDAD, DI.PRECIOCOSTO, DI.PRECIOVENTA, DI.SUBTOTAL, DI.ESTADO
+    FROM DETALLEING DI
+    INNER JOIN INGRESO I ON DI.IDINGRESO = I.IDINGRESO
+    INNER JOIN PRODUCTO P ON DI.IDPRODUCTO = P.IDPRODUCTO;";
+            DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
+            return Lista;
+        }
     }
 }
